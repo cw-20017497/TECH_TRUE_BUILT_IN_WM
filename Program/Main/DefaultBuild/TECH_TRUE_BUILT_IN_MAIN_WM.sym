@@ -1,0 +1,405 @@
+#05
+;FF     PUBLIC
+02FFED8@@CPR1
+02FFEDE@@FPRF1
+02FFEDF@@FPRF2
+02FFEDE@@FPRFP
+02FFED8@@FPRS
+02FFEDC@@FPRXD
+02FFEDC@@FPRXP
+02FFEDD@@FPRXS
+0100196@@csdiv
+01001E8@@csrem
+01001B4@@cudiv
+0100205@@curem
+010026A@@divuw
+010026A@@divuwe
+01002B9@@iscmp
+0100185@@ismul
+0100185@@iumul
+010023B@@iurem
+01002C5@@lsbor
+010029E@@lslsh
+01002C5@@lubor
+010029E@@lulsh
+02FEFBA_?DATA
+02FF52A_?DATAL
+02FEFBA_?DATS
+02FEFBA_?INIS
+02FEFBA_?INIT
+02FF040_?INITL
+0100664_?RLINIT
+0100002_?R_INIS
+0100002_?R_INIT
+02FEF98_@BRKADR
+02FEF86_@DIVR
+02FEF80_@FNCENT
+02FEF00_@FNCTBL
+02FEF8A_@LDIVR
+0000000_@MAA
+02FEFBA_@MEMBTM
+02FEF9A_@MEMTOP
+02FFED8_@RTARG0
+02FFED9_@RTARG1
+02FFEDA_@RTARG2
+02FFEDB_@RTARG3
+02FFEDC_@RTARG4
+02FFEDD_@RTARG5
+02FFEDE_@RTARG6
+02FFEDF_@RTARG7
+01FFE20_@SADBEG
+00000C0_@SADSIZ
+02FEF82_@SEED
+02FFED4_@SEGAX
+02FFED5_@SEGBC
+02FFED6_@SEGDE
+02FFED7_@SEGHL
+00FFED4_@STBEG
+00FF52A_@STEND
+02FEF92_@TOKPTR
+0100185_@cend
+01000D8_@cstart
+0100024_@vect24
+0100026_@vect26
+010002C_@vect2c
+01002D9_BaseTimerInterrupt
+0101D15_BlinkLED
+0100931_ByteOrderConv
+0100A76_CalCrc16
+0100989_CheckLimitValue
+010225D_ClearKeyEventFlag
+010324F_CloseGrinding
+0100A28_CommRecvPacket
+01009D5_CommSendPacket
+01032B1_ControlGrinding
+01008C7_ConvAsc2Byte
+01010D5_Crc16_Front
+0102B2E_DeQueue
+01008AA_Dec2Hex
+0100953_Delay_MS
+010090B_Delay_US
+02FF462_Dimming
+0100E48_DisableTimer
+02FF45C_Disp
+0101C2C_DispLedDuty
+02FF44A_DispTimer
+02FEFCC_DispTimerValTable
+0102A92_EnQueue
+0102E47_GetAdcData
+01009A6_GetCommHeader
+0101DFC_GetDisplayInit
+0103221_GetGrindingStatus
+010241C_GetKeyEventList
+0102429_GetKeyEventListSize
+0102239_GetKeyPopVal
+0102225_GetKeyVal
+010087A_GetMax
+0100861_GetMin
+010243D_GetNormalKeyEventList
+0102445_GetNormalKeyEventListSize
+02FF51C_Grinding
+0102088_HAL_DimmingLed
+010205B_HAL_DimmingLedAll
+01034CE_HAL_GetInputValue
+0102978_HAL_GetKeyVal
+010211B_HAL_GetLedDimmingDuty
+01020E8_HAL_GetLedDimmingStatus
+0102052_HAL_GetLedDuty
+010201C_HAL_GetLedOnOffStatus
+010298E_HAL_GetLeverIce
+01029A2_HAL_GetLeverWater
+01019F5_HAL_GetRecvBuffer
+0101931_HAL_GetRecvLength
+0101AED_HAL_GetSendBuffer
+0101946_HAL_GetSendLength
+010184A_HAL_InitComm
+01017FF_HAL_InitCommId
+010294B_HAL_InitKey
+0101EFB_HAL_InitLed
+010191D_HAL_InitRecvLength
+01018A4_HAL_IsEmptyRecvBuffer
+0101912_HAL_IsEmptySendBuffer
+0101875_HAL_IsFullRecvBuffer
+01018E2_HAL_IsFullSendBuffer
+0102124_HAL_IsUpdateLed
+01034E8_HAL_ProcessInput
+0101B38_HAL_SendByte
+010295F_HAL_SetKeyVal
+0102107_HAL_SetLedDimmingDuty
+010203B_HAL_SetLedDuty
+0102983_HAL_SetLeverIce
+0102997_HAL_SetLeverWater
+010195C_HAL_SetRecvBuffer
+0101A40_HAL_SetSendBuffer
+0101F5C_HAL_TurnOnOffLED
+0101F2F_HAL_TurnOnOffLEDAll
+0101FBC_HAL_TurnOnOffLEDEx
+01021AA_HAL_UpdateLed
+02FF47E_HalKey
+0102D7C_HalSampleAdc
+0100893_Hex2Dec
+0102DBE_InitAdc
+0102C4F_InitCommQueue
+0101C63_InitDispTimer
+0101DEE_InitDisplay
+0103201_InitGrinding
+010349F_InitInputConfDetectTime
+0102212_InitKey
+01029AB_InitQueue
+010083F_InitSystem
+0100DEC_InitTimer
+0101CB3_IsExpiredDispBlinkTimer
+0101C7D_IsExpiredDispTimer
+0100E7B_IsExpiredTimer
+0102EF8_IsOnOffSensingAdc
+010322A_IsOpenGrinding
+0102A1E_IsQueueEmpty
+0102A48_IsQueueFull
+010226E_IsSetKeyEventFlag
+01023E7_IsValidKeyCondition
+0102432_IsValidNormalKeyCondition
+0101015_IsValidPkt_Front
+02FF46E_Key
+02FEFEE_KeyEventList
+02FF46A_LastedDimming
+02FF466_LastedOnOff
+01011EE_MakePkt_Front
+02FF45E_OnOff
+0103248_OpenGrinding
+0101049_ParserPkt_Front
+0102BCC_PeekQueue
+01031FD_ProcessAdc
+0101EDD_ProcessDisplay
+010075B_ProcessEventHandler
+01028DD_ProcessKeyEventHandler
+01022C2_ProcessScanKey
+0102D29_R_ADC_Create
+0102D60_R_ADC_Get_Result
+0102D5C_R_ADC_Set_OperationOff
+0102D58_R_ADC_Set_OperationOn
+0102D50_R_ADC_Start
+0102D54_R_ADC_Stop
+0100693_R_CGC_Create
+01006AA_R_CGC_Get_ResetSource
+01021DB_R_PORT_Create
+010140F_R_SAU0_Create
+0101574_R_SAU1_Create
+0100664_R_Systeminit
+01017B3_R_TAU0_Channel0_Start
+01017C4_R_TAU0_Channel0_Stop
+01017D5_R_TAU0_Channel2_Start
+01017EA_R_TAU0_Channel2_Stop
+01016D9_R_TAU0_Create
+0101421_R_UART1_Create
+01014ED_R_UART1_Receive
+0101523_R_UART1_Send
+01014A1_R_UART1_Start
+01014CC_R_UART1_Stop
+0101586_R_UART2_Create
+0101652_R_UART2_Receive
+0101688_R_UART2_Send
+0101606_R_UART2_Start
+0101631_R_UART2_Stop
+01006AF_R_WDT_Create
+01006B6_R_WDT_Restart
+0102D17_ReceivedFrontAck
+0100B12_RecvPacketHandler
+01023BA_RegisterKeyEvent
+0100F40_RegisterTimerISR
+0100986_Reset
+0100DE4_SendPacketHandler
+0102C9B_SendPacketQueueFront
+0102E28_SetAdcData
+01009BB_SetCommHeader
+0102C6C_SetCommQueueFront
+0101C99_SetDispTimer
+01034A0_SetInputConfDetectTime
+010224D_SetKeyEventFlag
+0101E3D_StartDispTimerId
+0101E05_StartDisplayInit
+0100E02_StartTimer
+0101E5B_StopDispTimerId
+0100E71_StopTimer
+010083E_TimerIsrCallback
+0101C18_TurnOffAllLED
+0102EC9_TurnOffSensingAdc
+0101C22_TurnOnAllLED
+0102E9A_TurnOnSensingAdc
+0101D4C_UpdateDisplayTimer
+02FF432_comm
+02FF488_comm_front
+02FF040_comm_header
+02FF4E2_comm_queue
+0100AC2_crc16_cal
+01003DE_crc16tab
+02FF048_d_comm
+02FEFD2_dbg_duty
+02FEFC8_dbg_duty_dark
+02FEFC7_dbg_duty_dimming
+02FEFC9_dbg_duty_dimming_dark
+02FEFC6_dbg_duty_on
+02FEFCA_dbg_duty_onoff
+02FEFC4_dbg_the_ack_key
+02FEFD1_dbg_the_disp_update
+02FEFC5_dbg_the_req_led
+02FEF96_errno
+01035E4_exit
+02FF50E_front
+02FF012_gStArrAdcConfigList
+02FF512_gStArrAdcData
+02FF31A_g_uart1_rx_count
+02FF31C_g_uart1_rx_length
+02FF314_g_uart1_tx_count
+02FF328_g_uart2_rx_count
+02FF32A_g_uart2_rx_length
+02FF322_g_uart2_tx_count
+02FF316_gp_uart1_rx_address
+02FF310_gp_uart1_tx_address
+02FF324_gp_uart2_rx_address
+02FF31E_gp_uart2_tx_address
+010068B_hdwinit
+02FF02C_inputList
+02FEFD3_led_onoff
+0100728_main
+0103600_memcpy
+0103600_memcpy_f
+0103632_memset
+0103632_memset_f
+02FEFBA_onoff_pwm_delay
+02FEFBB_onoff_pwm_status
+02FF078_pkt_recv
+02FEFBC_pkt_recv_len
+02FF177_pkt_send
+02FEFBE_pkt_send_len
+02FF32C_recv_0_buf
+02FF32E_recv_1_buf
+02FF42E_recv_2_buf
+02FF430_recv_3_buf
+02FF32D_send_0_buf
+02FF3AE_send_1_buf
+02FF42F_send_2_buf
+02FF431_send_3_buf
+02FF30C_slider
+01035A0_stkinit
+02FF276_timer_info
+;FF     @cstart
+;FF     r_systeminit
+;FF     r_cg_cgc
+;FF     r_cg_cgc_user
+;FF     r_cg_wdt
+;FF     main
+<01006BA_InitStartTimers
+;FF     process_sys_event
+<01007F1_Evt_100ms_Handler
+01007D4_Evt_10ms_Handler
+01007C4_Evt_1ms_Handler
+0100820_Evt_1sec_Handler
+0100830_Evt_Front_Handler
+010002E_SysEventList
+;FF     util
+;FF     comm
+;FF     crc16
+;FF     parser
+<0100C88_SendPacket
+0100004_parser_rx_list
+010000E_parser_tx_list
+;FF     timer
+<0100ED9_UpdateTimer
+02FEFC0_pFunUserISR
+;FF     parser_front
+<0101263_MakePktAckKey
+01012D3_MakePktReqLed
+01011DC_ParserAckLed
+0101135_ParserReqKey
+0100F57_Rx_CRC_CCITT
+0100FC9_check_crc
+010007A_make_list
+0100070_parser_list
+;FF     r_cg_serial
+;FF     r_cg_timer
+;FF     hal_serial
+<0101853_HAL_GetMaxRecvBufferLength
+01018C0_HAL_GetMaxSendBufferLength
+0101BF1_IsCompleteTx
+0100323_r_uart1_interrupt_receive
+0100391_r_uart1_interrupt_send
+;FF     display
+;FF     display_lib
+<0101CDB_ResetDispBlinkTimer
+;FF     process_display
+<0101E0F_FindTimeVal
+0101E68_ProcessDisplayBoot
+0101EBF_ProcessDisplayormalMode
+0101EAF_Update
+02FEFCF_mu8Count
+02FEFD0_mu8Toggle
+;FF     hal_led
+;FF     r_cg_port
+;FF     r_cg_port_user
+;FF     key
+<0102282_FindSetKeyEvent
+02FEFD4_KeyEventList
+02FF47A_mu32PrevKeyVal
+;FF     key_handler
+<02FEFEC_gu8ListSize
+02FEFE4_pFunValid
+02FEFE8_pKeyEventList
+;FF     key_normal_handler
+<0102473_OnOffLed
+0102447_SelOnOff
+;FF     process_key
+<0102484_KeyEventHandler
+02FF010_mu16Delay
+02FF00A_mu32PrevKeyVal
+02FF00E_mu8ErrKeySkip
+;FF     hal_key
+;FF     queue
+;FF     comm_queue
+;FF     r_cg_adc
+;FF     r_cg_adc_user
+;FF     hal_adc
+;FF     api_adc
+<0103144_AverageAdc
+01031F5_ControlAdc
+0102DBD_DisableLeakSensor
+0102DB9_DisableTempCold
+0102DBB_DisableTempRoom
+0102DBC_EnableLeakSensor
+0102DB8_EnableTempCold
+0102DBA_EnableTempRoom
+0102E64_GetIndexConfList
+0102F2C_InitAdcData
+0102FB3_SumAdc
+;FF     grinding
+<010327E_ClearMode
+0103412_CloseDoor
+0103339_InitDoor
+0103331_IsClose
+01033B5_OpenDoor
+010323D_SetGrindingStatus
+0103255_SetMode
+02FF028_mu16DelayTime
+02FF026_mu16DelayTime
+02FF02A_mu16DelayTime
+;FF     hal_input
+<01034C4_HAL_GetDoorClose
+01034BA_HAL_GetDoorOpen
+;FF     @imul
+;FF     @csdiv
+;FF     @cudiv
+;FF     @csrem
+;FF     @curem
+;FF     @iurem
+;FF     @divuw
+;FF     @llsh
+;FF     @iscmp
+;FF     @lbor
+;FF     @SEGREG
+;FF     @stkinit
+;FF     @RTARG0
+;FF     exit
+;FF     memcpy_f
+;FF     memset_f
+;FF     @rom
+=
+

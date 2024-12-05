@@ -1,0 +1,270 @@
+#05
+;FF     PUBLIC
+02FFED8@@CPR1
+02FFEDE@@FPRF1
+02FFEDF@@FPRF2
+02FFEDE@@FPRFP
+02FFED8@@FPRS
+02FFEDC@@FPRXD
+02FFEDC@@FPRXP
+02FFEDD@@FPRXS
+01001C1@@csdiv
+0100213@@csrem
+01001DF@@cudiv
+0100230@@curem
+01002F3@@iscmp
+0100185@@ismul
+0100185@@iumul
+0100266@@iurem
+01002FF@@lsband
+0100313@@lsbor
+0100196@@lsmul
+01002FF@@luband
+0100313@@lubor
+0100295@@ludiv
+0100196@@lumul
+01002D4@@lursh
+02FEFBA_?DATA
+02FF514_?DATAL
+02FEFBA_?DATS
+02FEFBA_?INIS
+02FEFBA_?INIT
+02FF02A_?INITL
+01006C2_?RLINIT
+0100002_?R_INIS
+0100002_?R_INIT
+02FEF98_@BRKADR
+02FEF86_@DIVR
+02FEF80_@FNCENT
+02FEF00_@FNCTBL
+02FEF8A_@LDIVR
+0000000_@MAA
+02FEFBA_@MEMBTM
+02FEF9A_@MEMTOP
+02FFED8_@RTARG0
+02FFED9_@RTARG1
+02FFEDA_@RTARG2
+02FFEDB_@RTARG3
+02FFEDC_@RTARG4
+02FFEDD_@RTARG5
+02FFEDE_@RTARG6
+02FFEDF_@RTARG7
+01FFE20_@SADBEG
+00000C0_@SADSIZ
+02FEF82_@SEED
+02FFED4_@SEGAX
+02FFED5_@SEGBC
+02FFED6_@SEGDE
+02FFED7_@SEGHL
+00FFED4_@STBEG
+00FF514_@STEND
+02FEF92_@TOKPTR
+0100185_@cend
+01000D8_@cstart
+0100014_@vect14
+0100016_@vect16
+010002C_@vect2c
+010002E_@vect2e
+01003D5_BaseTimerInterrupt
+0101163_ByteOrderConv
+01007DF_CalCrc16
+0100791_CommRecvPacket
+010073E_CommSendPacket
+0101111_ConvAsc2Byte
+010133A_Crc16_Main
+0101C4F_DeQueue
+01010F4_Dec2Hex
+0101185_Delay_MS
+0101155_Delay_US
+02FF476_Dimming
+0100EC9_DisableTimer
+0101BCA_EnQueue
+0100719_GetCommHeader
+01010C4_GetMax
+01010AB_GetMin
+02FEFDE_GroupB_DimmingTick
+02FEFE0_GroupB_OnOffTick
+0100B10_HAL_GetKeyVal
+0100D49_HAL_GetRecvBuffer
+0100CCF_HAL_GetRecvLength
+0100DC4_HAL_GetSendBuffer
+0100CE7_HAL_GetSendLength
+0100C4C_HAL_InitComm
+0100C2D_HAL_InitCommId
+0100CB8_HAL_InitRecvLength
+0100C77_HAL_IsEmptyRecvBuffer
+0100C55_HAL_IsFullRecvBuffer
+0100C96_HAL_IsFullSendBuffer
+01019BF_HAL_OnOffLed_01
+01019C9_HAL_OnOffLed_02
+01019D3_HAL_OnOffLed_03
+01019DD_HAL_OnOffLed_04
+01019E7_HAL_OnOffLed_05
+01019F1_HAL_OnOffLed_06
+01019FB_HAL_OnOffLed_07
+0101A05_HAL_OnOffLed_08
+0101A0F_HAL_OnOffLed_09
+0101A19_HAL_OnOffLed_10
+0101A23_HAL_OnOffLed_11
+0101A2D_HAL_OnOffLed_12
+0100C29_HAL_ScanKey
+0100DEC_HAL_SendByte
+01017CD_HAL_SetDimmingDuty
+01017AC_HAL_SetDimmingLED
+0101794_HAL_SetOnOffDuty
+0101773_HAL_SetOnOffLED
+0100CFF_HAL_SetRecvBuffer
+0100D6C_HAL_SetSendBuffer
+0101713_HAL_TurnOnOffLED
+01010DD_Hex2Dec
+0101A37_InitCommQueue
+0101B05_InitQueue
+010109F_InitSystem
+0100E75_InitTimer
+0100EF3_IsExpiredTimer
+0101B6A_IsQueueEmpty
+0101B8C_IsQueueFull
+010127D_IsValidPkt_Main
+010140E_MakePkt_Main
+02FF46E_OnOff
+01012C3_ParserPkt_Main
+0101CD8_PeekQueue
+0101010_ProcessEventHandler
+01006E9_R_CGC_Create
+0100700_R_CGC_Get_ResetSource
+0101EB4_R_PORT_Create
+0101D4F_R_SAU1_Create
+01006C2_R_Systeminit
+0101F97_R_TAU0_Channel0_Start
+0101FA8_R_TAU0_Channel0_Stop
+0101FB9_R_TAU0_Channel1_Start
+0101FCA_R_TAU0_Channel1_Stop
+0101EF4_R_TAU0_Create
+0101D61_R_UART2_Create
+0101E2D_R_UART2_Receive
+0101E63_R_UART2_Send
+0101DE1_R_UART2_Start
+0101E0C_R_UART2_Stop
+0100705_R_WDT_Create
+0100715_R_WDT_Restart
+0101AF3_ReceivedFrontAck
+010087A_RecvPacketHandler
+0100F98_RegisterTimerISR
+01011B8_Reset
+0100B08_SendPacketHandler
+0101A83_SendPacketQueueFront
+0100729_SetCommHeader
+0101A54_SetCommQueueFront
+0100E8B_StartTimer
+0100EE9_StopTimer
+02FF238_comm
+02FF47E_comm_front
+02FF02A_comm_header
+02FF502_comm_main
+02FF4F6_comm_queue
+010082B_crc16_cal
+0100452_crc16tab
+02FF02C_d_comm
+02FEFD8_dbg_err_1
+02FEFD9_dbg_err_2
+02FEFDA_dbg_err_3
+02FEF96_errno
+010201F_exit
+02FF510_g_uart2_rx_count
+02FF512_g_uart2_rx_length
+02FF50A_g_uart2_tx_count
+02FF50C_gp_uart2_rx_address
+02FF506_gp_uart2_tx_address
+02FEFBE_gu32Key
+02FEFC2_gu32KeyOut
+01006E1_hdwinit
+0100FE7_main
+010203B_memcpy
+010203B_memcpy_f
+010206D_memset
+010206D_memset_f
+02FF038_pkt_recv
+02FEFBA_pkt_recv_len
+02FF138_pkt_send
+02FEFBC_pkt_send_len
+0101FDB_stkinit
+02FEFDB_the_duty
+02FF43E_timer_info
+02FEFDC_u16Cycle
+;FF     @cstart
+;FF     r_systeminit
+;FF     r_cg_cgc
+;FF     r_cg_cgc_user
+;FF     r_cg_wdt
+;FF     comm
+;FF     crc16
+;FF     parser
+<01009CB_SendPacket
+0100018_parser_rx_list
+0100022_parser_tx_list
+;FF     hal_key
+<0100B47_ScanKey
+0100BB3_ScanKeyOut
+02FEFC6_mu16Count
+02FEFCC_mu32Count
+02FEFD0_mu32PrevVal
+02FEFC8_mu32PrevVal
+;FF     hal_serial
+<0100E42_IsCompleteTx
+0100327_r_uart2_interrupt_receive
+0100395_r_uart2_interrupt_send
+;FF     timer
+<0100F49_UpdateTimer
+02FEFD4_pFunUserISR
+;FF     main
+<0100FAF_InitStartTimers
+;FF     process_sys_event
+<0101091_Evt_100ms_Handler
+0101083_Evt_10ms_Handler
+0101073_Evt_1ms_Handler
+0100030_SysEventList
+;FF     util
+;FF     parser_main
+<010162E_MakePktAckLed
+010147D_MakePktReqKey
+01013FC_ParserAckKey
+010139A_ParserReqLed
+01011BB_Rx_CRC_CCITT
+010122D_check_crc
+0100066_make_list
+010005A_parser_list
+;FF     hal_led
+<01016D4_CalcDuty2Tick
+01018F2_ControlLed
+02FEFE2_Group_A_List
+010168C_IsSetBit
+010184E_OnOffDimming
+01017E5_OnOffLed
+010041F_r_tau0_channel1_interrupt
+;FF     hal_led_onoff
+;FF     comm_queue
+;FF     queue
+;FF     r_cg_serial
+;FF     r_cg_port
+;FF     r_cg_timer
+;FF     @imul
+;FF     @lmul
+;FF     @csdiv
+;FF     @cudiv
+;FF     @csrem
+;FF     @curem
+;FF     @iurem
+;FF     @ludiv
+;FF     @lursh
+;FF     @iscmp
+;FF     @lband
+;FF     @lbor
+;FF     @SEGREG
+;FF     @stkinit
+;FF     @RTARG0
+;FF     exit
+;FF     memcpy_f
+;FF     memset_f
+;FF     @rom
+=
+
