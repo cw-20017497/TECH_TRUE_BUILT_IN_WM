@@ -15,6 +15,7 @@
 #include "key_event_lib.h"
 
 #include "grinding.h"
+#include "hal_led.h"
 
 
 
@@ -24,12 +25,17 @@ static void DispOnOff(U8 mu8OnOff);
 static U8 SelOnOff(void);
 static U8 OnOffLed(void);
 
+static U8 SelLedDuty(void);
 
 // 일반 모드 리스트
 KeyEventList_T KeyEventList[] =
 {
     /* KEY,            Short,        2sec,           3sec,      5sec,           Pop,           TS */
+#if CONFIG_TEST_LED_KEY
+    { K_ONOFF,        SelLedDuty,      NULL,       NULL,      NULL,           NULL,          NULL },
+#else
     { K_ONOFF,        SelOnOff,      OnOffLed,       NULL,      NULL,           NULL,          NULL },
+#endif
 };
 
 U8 IsValidNormalKeyCondition(U32 mu32Key)
@@ -75,6 +81,21 @@ static U8 OnOffLed(void)
 {
 
     led_onoff = !led_onoff;
+
+    return 0;
+}
+
+
+extern U8 dbg_duty;
+static U8 SelLedDuty(void)
+{
+
+    dbg_duty += 10;
+
+    if( dbg_duty > 100 )
+    {
+        dbg_duty = 10;
+    }
 
     return 0;
 }
