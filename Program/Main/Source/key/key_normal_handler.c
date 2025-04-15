@@ -22,6 +22,8 @@
 
 static void DispOnOff(U8 mu8OnOff);
 
+static U8 SelOn(void);
+static U8 SelOff(void);
 static U8 SelOnOff(void);
 static U8 OnOffLed(void);
 
@@ -34,7 +36,7 @@ KeyEventList_T KeyEventList[] =
 #if CONFIG_TEST_LED_KEY
     { K_ONOFF,        SelLedDuty,      NULL,       NULL,      NULL,           NULL,          NULL },
 #else
-    { K_ONOFF,        SelOnOff,      OnOffLed,       NULL,      NULL,           NULL,          NULL },
+    { K_ONOFF,        SelOff,      NULL,       SelOn,      NULL,           NULL,          NULL },
 #endif
 };
 
@@ -56,6 +58,29 @@ U8 GetNormalKeyEventListSize(void)
 }
 
 
+static U8 SelOn(void)
+{
+    if( GetGrindingStatus() == GRINDING_CLOSE
+            || GetGrindingStatus() == GRINDING_CLOSING
+      )
+    {
+        OpenGrinding();
+    }
+
+    return 0;
+}
+
+static U8 SelOff(void)
+{
+    if( GetGrindingStatus() == GRINDING_OPEN
+            || GetGrindingStatus() == GRINDING_OPENING
+      )
+    {
+        CloseGrinding();
+    }
+
+    return 0;
+}
 
 static U8 SelOnOff(void)
 {
