@@ -17,6 +17,8 @@
 #include "hal_input.h"
 #include "key.h"
 #include "process_key.h"
+#include "bldc_motor.h"
+#include "moving_faucet.h"
 
 typedef void(*Action_T)(void);
 typedef struct _sys_event_
@@ -88,9 +90,12 @@ static void Evt_10ms_Handler( void )
 
     ProcessScanKey();
     ProcessKeyEventHandler();
+
+    ProcessBldcMotor();
 }
 
 
+#if 0
 U8 onoff_pwm_delay = 10;
 U8 onoff_pwm_status = FALSE;
 static void Evt_100ms_Handler(void)
@@ -112,7 +117,13 @@ static void Evt_100ms_Handler(void)
 
 
     ControlGrinding();
+}
+#endif
+static void Evt_100ms_Handler(void)
+{
+    StartTimer( TIMER_ID_100MS, 100);
 
+    ProcessMovingFaucet();
 }
 
 
@@ -156,6 +167,9 @@ void InitSystem(void)
     InitCommQueue();
     InitGrinding();
 
-    RegisterTimerISR( TimerIsrCallback  );
+    InitBldcMotor();
+    InitMovingFaucet();
+
+    RegisterTimerISR( TimerIsrCallback );
 }
 

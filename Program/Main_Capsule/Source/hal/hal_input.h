@@ -8,6 +8,9 @@ enum
     IN_DOOR_OPEN,
     IN_DOOR_CLOSE,
 
+    IN_CAPSULE_OUT,
+    IN_CAPSULE_IN,
+
     IN_MAX_NUM
 };
 

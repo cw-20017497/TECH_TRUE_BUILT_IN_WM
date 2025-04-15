@@ -23,13 +23,15 @@
 * Device(s)    : R5F100GE
 * Tool-Chain   : CA78K0R
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2024-12-03
+* Creation Date: 2025-04-15
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 Pragma directive
 ***********************************************************************************************************************/
 #pragma interrupt INTTM00 r_tau0_channel0_interrupt
+#pragma interrupt INTTM01 r_tau0_channel1_interrupt
+#pragma interrupt INTTM04 r_tau0_channel4_interrupt
 /* Start user code for pragma. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 
@@ -55,6 +57,30 @@ Global variables and functions
 * Return Value : None
 ***********************************************************************************************************************/
 __interrupt static void r_tau0_channel0_interrupt(void)
+{
+    /* Start user code. Do not edit comment generated here */
+    /* End user code. Do not edit comment generated here */
+}
+
+/***********************************************************************************************************************
+* Function Name: r_tau0_channel1_interrupt
+* Description  : This function is INTTM01 interrupt service routine.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+__interrupt static void r_tau0_channel1_interrupt(void)
+{
+    /* Start user code. Do not edit comment generated here */
+    /* End user code. Do not edit comment generated here */
+}
+
+/***********************************************************************************************************************
+* Function Name: r_tau0_channel4_interrupt
+* Description  : This function is INTTM04 interrupt service routine.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+__interrupt static void r_tau0_channel4_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
     /* End user code. Do not edit comment generated here */

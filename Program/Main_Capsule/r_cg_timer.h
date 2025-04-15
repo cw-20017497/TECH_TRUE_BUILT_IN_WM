@@ -23,7 +23,7 @@
 * Device(s)    : R5F100GE
 * Tool-Chain   : CA78K0R
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2024-12-03
+* Creation Date: 2025-04-15
 ***********************************************************************************************************************/
 
 #ifndef TAU_H
@@ -397,6 +397,10 @@ Macro definitions
 #define _7CFF_TAU_TDR00_VALUE                   (0x7CFFU)
 /* Clock divisor for TAU0 channel 0 */
 #define _0001_TAU0_CHANNEL0_DIVISOR             (0x0001U)
+/* 16-bit timer data register 01 (TDR01) */
+#define _63FF_TAU_TDR01_VALUE                   (0x63FFU)
+/* Clock divisor for TAU0 channel 1 */
+#define _0001_TAU0_CHANNEL1_DIVISOR             (0x0001U)
 /* 16-bit timer data register 02 (TDR02) */
 #define _0C7F_TAU_TDR02_VALUE                   (0x0C7FU)
 /* 16-bit timer data register 03 (TDR03) */
@@ -405,6 +409,18 @@ Macro definitions
 #define _0001_TAU0_CHANNEL2_DIVISOR             (0x0001U)
 /* Clock divisor for TAU0 channel 3 */
 #define _0001_TAU0_CHANNEL3_DIVISOR             (0x0001U)
+/* 16-bit timer data register 04 (TDR04) */
+#define _9C3F_TAU_TDR04_VALUE                   (0x9C3FU)
+/* Clock divisor for TAU0 channel 4 */
+#define _0002_TAU0_CHANNEL4_DIVISOR             (0x0002U)
+/* 16-bit timer data register 06 (TDR06) */
+#define _063F_TAU_TDR06_VALUE                   (0x063FU)
+/* 16-bit timer data register 07 (TDR07) */
+#define _0140_TAU_TDR07_VALUE                   (0x0140U)
+/* Clock divisor for TAU0 channel 6 */
+#define _0001_TAU0_CHANNEL6_DIVISOR             (0x0001U)
+/* Clock divisor for TAU0 channel 7 */
+#define _0001_TAU0_CHANNEL7_DIVISOR             (0x0001U)
 
 /***********************************************************************************************************************
 Typedef definitions
@@ -416,8 +432,14 @@ Global functions
 void R_TAU0_Create(void);
 void R_TAU0_Channel0_Start(void);
 void R_TAU0_Channel0_Stop(void);
+void R_TAU0_Channel1_Start(void);
+void R_TAU0_Channel1_Stop(void);
 void R_TAU0_Channel2_Start(void);
 void R_TAU0_Channel2_Stop(void);
+void R_TAU0_Channel4_Start(void);
+void R_TAU0_Channel4_Stop(void);
+void R_TAU0_Channel6_Start(void);
+void R_TAU0_Channel6_Stop(void);
 
 /* Start user code for function. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */

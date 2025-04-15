@@ -903,6 +903,12 @@
     <Instance Guid="68ba0b36-1c8e-4678-b82c-adf35afadc54">
       <MemoCount>0</MemoCount>
     </Instance>
+    <Instance Guid="621392b3-1c9a-4197-898c-f7ae24425281">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="adea54d0-8274-406b-b95c-cc8651a17b3c">
+      <MemoCount>0</MemoCount>
+    </Instance>
     <Instance Guid="9cadd3fa-298f-42b1-bc21-136753149643">
       <MemoCount>0</MemoCount>
     </Instance>
@@ -919,12 +925,6 @@
       <MemoCount>0</MemoCount>
     </Instance>
     <Instance Guid="b03a4f7f-2038-4df2-adbf-a6bbef105f30">
-      <MemoCount>0</MemoCount>
-    </Instance>
-    <Instance Guid="621392b3-1c9a-4197-898c-f7ae24425281">
-      <MemoCount>0</MemoCount>
-    </Instance>
-    <Instance Guid="adea54d0-8274-406b-b95c-cc8651a17b3c">
       <MemoCount>0</MemoCount>
     </Instance>
   </Class>
@@ -1074,13 +1074,13 @@
       <SourceItemType35>CSource</SourceItemType35>
       <SourceItemGuid36>f8c4dc39-196b-4546-aefb-80a723e71db3</SourceItemGuid36>
       <SourceItemType36>CSource</SourceItemType36>
-      <SourceItemGuid37>9226eeb3-83a8-42bc-8900-486f2370f881</SourceItemGuid37>
+      <SourceItemGuid37>84bde168-5d52-46db-951c-8b7067417bda</SourceItemGuid37>
       <SourceItemType37>CSource</SourceItemType37>
-      <SourceItemGuid38>cfa437ba-bbf5-4ed2-b941-cf1225bf7a33</SourceItemGuid38>
+      <SourceItemGuid38>9226eeb3-83a8-42bc-8900-486f2370f881</SourceItemGuid38>
       <SourceItemType38>CSource</SourceItemType38>
-      <SourceItemGuid39>325519a1-4b87-4327-ac00-9b8e2b1bd2f1</SourceItemGuid39>
+      <SourceItemGuid39>cfa437ba-bbf5-4ed2-b941-cf1225bf7a33</SourceItemGuid39>
       <SourceItemType39>CSource</SourceItemType39>
-      <SourceItemGuid40>84bde168-5d52-46db-951c-8b7067417bda</SourceItemGuid40>
+      <SourceItemGuid40>325519a1-4b87-4327-ac00-9b8e2b1bd2f1</SourceItemGuid40>
       <SourceItemType40>CSource</SourceItemType40>
       <SourceItemCount>41</SourceItemCount>
       <VfiSourceItemCount>0</VfiSourceItemCount>
@@ -1991,7 +1991,7 @@ Source\timer
       <SourceItem36-IsLockedByUser>False</SourceItem36-IsLockedByUser>
       <SourceItem36-BuildingTarget-0>True</SourceItem36-BuildingTarget-0>
       <SourceItem36-IndividualCompileOption-0>False</SourceItem36-IndividualCompileOption-0>
-      <TimeTagModified-SourceItem37--0>-8584569095269526457</TimeTagModified-SourceItem37--0>
+      <TimeTagModified-SourceItem37--0>-8584569034471629301</TimeTagModified-SourceItem37--0>
       <SourceItem37-IsLockedByUser>False</SourceItem37-IsLockedByUser>
       <SourceItem37-BuildingTarget-0>True</SourceItem37-BuildingTarget-0>
       <SourceItem37-IndividualCompileOption-0>False</SourceItem37-IndividualCompileOption-0>
@@ -1999,11 +1999,11 @@ Source\timer
       <SourceItem38-IsLockedByUser>False</SourceItem38-IsLockedByUser>
       <SourceItem38-BuildingTarget-0>True</SourceItem38-BuildingTarget-0>
       <SourceItem38-IndividualCompileOption-0>False</SourceItem38-IndividualCompileOption-0>
-      <TimeTagModified-SourceItem39--0>-8586030026644331325</TimeTagModified-SourceItem39--0>
+      <TimeTagModified-SourceItem39--0>-8584569095269526457</TimeTagModified-SourceItem39--0>
       <SourceItem39-IsLockedByUser>False</SourceItem39-IsLockedByUser>
       <SourceItem39-BuildingTarget-0>True</SourceItem39-BuildingTarget-0>
       <SourceItem39-IndividualCompileOption-0>False</SourceItem39-IndividualCompileOption-0>
-      <TimeTagModified-SourceItem40--0>-8584569034471629301</TimeTagModified-SourceItem40--0>
+      <TimeTagModified-SourceItem40--0>-8586030026644331325</TimeTagModified-SourceItem40--0>
       <SourceItem40-IsLockedByUser>False</SourceItem40-IsLockedByUser>
       <SourceItem40-BuildingTarget-0>True</SourceItem40-BuildingTarget-0>
       <SourceItem40-IndividualCompileOption-0>False</SourceItem40-IndividualCompileOption-0>
@@ -2463,7 +2463,7 @@ Source\timer
       <DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>No</DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>1</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-DebuggerGuid />
-      <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileName>DefaultBuild\TECH_TRUE_BUILT_IN_MAIN_WM.lmf</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileName>
+      <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileName>DefaultBuild\TECH_TRUE_BUILT_IN_MAIN_CAPSULE.lmf</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileName>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileType>LoadModuleFile</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-FileType>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-Offset>0</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-Offset>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-StartAddress>0</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-DownloadItem0-StartAddress>
@@ -5616,16 +5616,16 @@ Source\timer
     &lt;/FUNC&gt;
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="0FE00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
+        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
-        &lt;lvi_option Name="lvi_option" Value="73" /&gt;
         &lt;pior_value Name="pior_value" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
@@ -5634,9 +5634,9 @@ Source\timer
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
-        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
+        &lt;lvi_option Name="lvi_option" Value="73" /&gt;
         &lt;wdt_option Name="wdt_option" Value="7F" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;rrm Name="rrm" Value="0FE00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;
@@ -6494,7 +6494,6 @@ Source\timer
 &lt;/RL78G13&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>36684bbe-dd72-49e1-bbcf-2efa83e820f0</ToolGUID>
-      <CodeGeneratorItem>d5e3ba71-b229-4c2e-8201-a929bacb9bf7</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="59a8ea33-e927-4d12-9690-902219de85d7">
