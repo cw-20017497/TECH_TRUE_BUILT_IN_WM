@@ -13,7 +13,7 @@
 #include "process_display.h"
 #include "process_sys_event.h"
 
-#include "grinding.h"
+#include "capsule.h"
 #include "hal_input.h"
 #include "key.h"
 #include "process_key.h"
@@ -95,7 +95,6 @@ static void Evt_10ms_Handler( void )
 }
 
 
-#if 0
 U8 onoff_pwm_delay = 10;
 U8 onoff_pwm_status = FALSE;
 static void Evt_100ms_Handler(void)
@@ -116,15 +115,10 @@ static void Evt_100ms_Handler(void)
     }
 
 
-    ControlGrinding();
+    //ControlGrinding();
+    ControlCapsule();
 }
-#endif
-static void Evt_100ms_Handler(void)
-{
-    StartTimer( TIMER_ID_100MS, 100);
 
-    ProcessMovingFaucet();
-}
 
 
 static void Evt_1sec_Handler( void )
@@ -165,7 +159,7 @@ void InitSystem(void)
 
     InitDisplay();
     InitCommQueue();
-    InitGrinding();
+    InitCapsule();
 
     InitBldcMotor();
     InitMovingFaucet();
