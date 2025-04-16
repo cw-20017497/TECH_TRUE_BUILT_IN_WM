@@ -14,7 +14,7 @@
 
 #include "key_event_lib.h"
 
-#include "grinding.h"
+#include "capsule.h"
 #include "hal_led.h"
 
 
@@ -60,11 +60,11 @@ U8 GetNormalKeyEventListSize(void)
 
 static U8 SelOn(void)
 {
-    if( GetGrindingStatus() == GRINDING_CLOSE
-            || GetGrindingStatus() == GRINDING_CLOSING
+    if( GetCapsuleStatus() == CAPSULE_CLOSE
+            || GetCapsuleStatus() == CAPSULE_CLOSING
       )
     {
-        OpenGrinding();
+        OpenCapsule();
     }
 
     return 0;
@@ -72,11 +72,11 @@ static U8 SelOn(void)
 
 static U8 SelOff(void)
 {
-    if( GetGrindingStatus() == GRINDING_OPEN
-            || GetGrindingStatus() == GRINDING_OPENING
+    if( GetCapsuleStatus() == CAPSULE_OPEN
+            || GetCapsuleStatus() == CAPSULE_OPENING
       )
     {
-        CloseGrinding();
+        CloseCapsule();
     }
 
     return 0;
@@ -84,17 +84,17 @@ static U8 SelOff(void)
 
 static U8 SelOnOff(void)
 {
-    if( GetGrindingStatus() == GRINDING_OPEN
-            || GetGrindingStatus() == GRINDING_OPENING
+    if( GetCapsuleStatus() == CAPSULE_OPEN
+            || GetCapsuleStatus() == CAPSULE_OPENING
       )
     {
-        CloseGrinding();
+        CloseCapsule();
     }
-    else if( GetGrindingStatus() == GRINDING_CLOSE
-            || GetGrindingStatus() == GRINDING_CLOSING
+    else if( GetCapsuleStatus() == CAPSULE_CLOSE
+            || GetCapsuleStatus() == CAPSULE_CLOSING
       )
     {
-        OpenGrinding();
+        OpenCapsule();
     }
 
     return 0;

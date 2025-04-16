@@ -91,7 +91,7 @@ static void Evt_10ms_Handler( void )
     ProcessScanKey();
     ProcessKeyEventHandler();
 
-    ProcessBldcMotor();
+    //ProcessBldcMotor();
 }
 
 
@@ -101,6 +101,7 @@ static void Evt_100ms_Handler(void)
 {
     StartTimer( TIMER_ID_100MS, 100);
 
+    // LED OUTPUT POWER
     if( onoff_pwm_delay != 0 )
     {
         onoff_pwm_delay--;
@@ -114,8 +115,6 @@ static void Evt_100ms_Handler(void)
         }
     }
 
-
-    //ControlGrinding();
     ControlCapsule();
 }
 
@@ -161,8 +160,8 @@ void InitSystem(void)
     InitCommQueue();
     InitCapsule();
 
-    InitBldcMotor();
-    InitMovingFaucet();
+   // InitBldcMotor();
+   // InitMovingFaucet();
 
     RegisterTimerISR( TimerIsrCallback );
 }

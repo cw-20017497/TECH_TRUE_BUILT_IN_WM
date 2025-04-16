@@ -23,7 +23,7 @@
 * Device(s)    : R5F100GE
 * Tool-Chain   : CA78K0R
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2025-04-15
+* Creation Date: 2025-04-16
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -95,9 +95,9 @@ void R_TAU0_Create(void)
     /* Set INTTM00 low priority */
     TMPR100 = 1U;
     TMPR000 = 1U;
-    /* Set INTTM01 low priority */
-    TMPR101 = 1U;
-    TMPR001 = 1U;
+    /* Set INTTM01 high priority */
+    TMPR101 = 0U;
+    TMPR001 = 0U;
     /* Set INTTM04 low priority */
     TMPR104 = 1U;
     TMPR004 = 1U;
