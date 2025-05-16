@@ -23,7 +23,7 @@
 * Device(s)    : R5F100GE
 * Tool-Chain   : CA78K0R
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2025-04-16
+* Creation Date: 2025-05-16
 ***********************************************************************************************************************/
 
 #ifndef SERIAL_H

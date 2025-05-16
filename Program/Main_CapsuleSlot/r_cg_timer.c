@@ -23,7 +23,7 @@
 * Device(s)    : R5F100GE
 * Tool-Chain   : CA78K0R
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2025-04-16
+* Creation Date: 2025-05-16
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -56,7 +56,7 @@ Global variables and functions
 void R_TAU0_Create(void)
 {
     TAU0EN = 1U;    /* supplies input clock */
-    TPS0 = _0000_TAU_CKM0_FCLK_0 | _0010_TAU_CKM1_FCLK_1 | _0000_TAU_CKM2_FCLK_1 | _0000_TAU_CKM3_FCLK_8;
+    TPS0 = _0000_TAU_CKM0_FCLK_0 | _0000_TAU_CKM1_FCLK_0 | _0000_TAU_CKM2_FCLK_1 | _0000_TAU_CKM3_FCLK_8;
     /* Stop all channels */
     TT0 = _0001_TAU_CH0_STOP_TRG_ON | _0002_TAU_CH1_STOP_TRG_ON | _0004_TAU_CH2_STOP_TRG_ON |
           _0008_TAU_CH3_STOP_TRG_ON | _0010_TAU_CH4_STOP_TRG_ON | _0020_TAU_CH5_STOP_TRG_ON |
@@ -132,9 +132,9 @@ void R_TAU0_Create(void)
     TO0 &= ~_0008_TAU_CH3_OUTPUT_VALUE_1;
     TOE0 |= _0008_TAU_CH3_OUTPUT_ENABLE;
     /* Channel 4 used as interval timer */
-    TMR04 = _8000_TAU_CLOCK_SELECT_CKM1 | _0000_TAU_CLOCK_MODE_CKS | _0000_TAU_COMBINATION_SLAVE |
+    TMR04 = _0000_TAU_CLOCK_SELECT_CKM0 | _0000_TAU_CLOCK_MODE_CKS | _0000_TAU_COMBINATION_SLAVE |
             _0000_TAU_TRIGGER_SOFTWARE | _0000_TAU_MODE_INTERVAL_TIMER | _0000_TAU_START_INT_UNUSED;
-    TDR04 = _9C3F_TAU_TDR04_VALUE;
+    TDR04 = _7CFF_TAU_TDR04_VALUE;
     TOM0 &= ~_0010_TAU_CH4_OUTPUT_COMBIN;
     TOL0 &= ~_0010_TAU_CH4_OUTPUT_LEVEL_L;
     TO0 &= ~_0010_TAU_CH4_OUTPUT_VALUE_1;

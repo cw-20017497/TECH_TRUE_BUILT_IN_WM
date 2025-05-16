@@ -229,6 +229,6 @@ void ProcessKeyEventHandler(void)
     mu8Ret = KeyEventHandler( pKeyValidFun, pKeyEventList, mu8KeyEventSize );
     if( mu8Ret == TRUE )
     {
-        mu16Delay = 30; // wait.. 300ms...
+    //    mu16Delay = 30; // wait.. 300ms...
     }
 }

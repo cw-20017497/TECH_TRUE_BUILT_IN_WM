@@ -19,7 +19,8 @@ typedef enum
 #define  EVENT_TIME_OUT_3S          300     // 3sec
 #define  EVENT_TIME_OUT_2S          200     // 2sec
 #define  EVENT_TIME_OUT_1S          100     // 1sec
-#define  EVENT_TIME_OUT_SHORT        10     // 100ms
+#define  EVENT_TIME_OUT_DCLICK      50      // 500ms
+#define  EVENT_TIME_OUT_SHORT       10       // 100ms
 #define  MAX_EVENT_TIME_OUT         EVENT_TIME_OUT_5S
 
 typedef struct _key_
@@ -97,7 +98,7 @@ static KeyEvent_T KeyEventList[] =
     { EVENT_TIME_OUT_5S,    KEY_EVENT_PUSHED_LONG_5S },
     { EVENT_TIME_OUT_3S,    KEY_EVENT_PUSHED_LONG_3S },
     { EVENT_TIME_OUT_2S,    KEY_EVENT_PUSHED_LONG_2S },
-    { EVENT_TIME_OUT_1S,    KEY_EVENT_PUSHED_LONG_1S },
+    { EVENT_TIME_OUT_DCLICK,    KEY_EVENT_PUSHED_LONG_1S },
     { EVENT_TIME_OUT_SHORT, KEY_EVENT_PUSHED_SHORT },
 
 };

@@ -29,6 +29,11 @@ static U8 OnOffLed(void);
 
 static U8 SelLedDuty(void);
 
+// step motor
+static U8 SelStepDir(void);
+static U8 SelStepStart(void);
+static U8 SelStepStop(void);
+
 // 일반 모드 리스트
 KeyEventList_T KeyEventList[] =
 {
@@ -36,7 +41,8 @@ KeyEventList_T KeyEventList[] =
 #if CONFIG_TEST_LED_KEY
     { K_ONOFF,        SelLedDuty,      NULL,       NULL,      NULL,           NULL,          NULL },
 #else
-    { K_ONOFF,        SelOff,      NULL,       SelOn,      NULL,           NULL,          NULL },
+    //{ K_ONOFF,        SelOff,      NULL,       SelOn,      NULL,           NULL,          NULL },
+    { K_ONOFF,        SelStepDir,      NULL,       NULL,      NULL,           SelStepStop,          SelStepStart },
 #endif
 };
 
@@ -121,6 +127,54 @@ static U8 SelLedDuty(void)
     {
         dbg_duty = 10;
     }
+
+    return 0;
+}
+
+
+
+// step motor
+// 한번 길게 누르면 정방향
+// 빠르게 두번 누르면 역방향
+#define CLEAR_TIME    1000U   //@500ms
+U8 count = 2; 
+U16 dbg_count = 0;
+static U8 SelStepDir(void)
+{
+    dbg_count++;
+    if( IsExpiredTimer( TIMER_ID_TIME_OUT ) == TIMER_EXPIRE )
+    {
+        count = 2;
+    }
+
+    if( count != 0 )
+    {
+        count--;
+    }
+
+    StartTimer( TIMER_ID_TIME_OUT, CLEAR_TIME );
+
+    return 0;
+}
+
+static U8 SelStepStart(void)
+{
+    if( count == 0 )
+    {
+        OpenCapsule();
+    }
+    else
+    {
+        CloseCapsule();
+    }
+
+    count = 2;
+    return 0;
+}
+
+static U8 SelStepStop(void)
+{
+    InitCapsule();
 
     return 0;
 }

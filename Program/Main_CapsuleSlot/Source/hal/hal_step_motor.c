@@ -36,9 +36,9 @@
  */
 U8 dbg_the_speed_cnt_1 = 1;
 U8 dbg_the_speed_cnt_2 = 2;
-#define SM_SPEED_0_COUNT  0    /* @1ms */
-#define SM_SPEED_1_COUNT  1    /* @2ms */
-#define SM_SPEED_2_COUNT  2    /* @3ms */
+#define SM_SPEED_0_COUNT  0    /* @2.5ms */
+#define SM_SPEED_1_COUNT  1    /* @5.0ms */
+#define SM_SPEED_2_COUNT  2    /* @7.5ms */
 
 #define SM_HOLD_STEP_0   10    /* 10ms @100ms */
 #define SM_HOLD_STEP_1   10    /* 10ms @100ms */

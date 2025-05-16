@@ -8,8 +8,8 @@
 
 #define  CAPSULE_DOOR                 SM_ID_0
 #define  CAPSULE_DOOR_SPEED           SM_SPEED_1
-#define  CAPSULE_DOOR_OPEN_STEP_VAL   (2000)
-#define  CAPSULE_DOOR_CLOSE_STEP_VAL  (-15)
+#define  CAPSULE_DOOR_OPEN_STEP_VAL   (20000)
+#define  CAPSULE_DOOR_CLOSE_STEP_VAL  (-20000)
 
 
 /* MODE */
@@ -48,7 +48,7 @@ void InitCapsule(void)
 {
     Capsule.Status      = CAPSULE_CLOSE;
 
-    Capsule.Mode        = CAPSULE_MODE_INIT;
+    Capsule.Mode        = 0;
     Capsule.InitStep    = 0;
     Capsule.OpenStep    = 0;
     Capsule.CloseStep   = 0;
@@ -57,9 +57,10 @@ void InitCapsule(void)
 
 
     // FAUCET - UP/DOWN
+    HAL_InitStepMotor();
     HAL_InitStepVal( CAPSULE_DOOR );
-    HAL_SetCurrentStep( CAPSULE_DOOR, CAPSULE_DOOR_OPEN_STEP_VAL );
-    HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_OPEN_STEP_VAL );
+    HAL_SetCurrentStep( CAPSULE_DOOR, 0 );
+    HAL_SetTargetStep( CAPSULE_DOOR, 0 );
     HAL_SetStepSpeed( CAPSULE_DOOR, CAPSULE_DOOR_SPEED );
 }
 
@@ -249,6 +250,9 @@ static U8 OpenDoor(void)
     {
         case 0:
             HAL_StopMove( CAPSULE_DOOR );
+
+            HAL_SetTargetStep( CAPSULE_DOOR, 0 );
+            HAL_SetCurrentStep( CAPSULE_DOOR, 0 );
             HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_OPEN_STEP_VAL );
 
             Capsule.OpenStep++;
@@ -278,6 +282,9 @@ static U8 CloseDoor(void)
     {
         case 0:
             HAL_StopMove( CAPSULE_DOOR );
+            
+            HAL_SetTargetStep( CAPSULE_DOOR, 0 );
+            HAL_SetCurrentStep( CAPSULE_DOOR, 0 );
             HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_CLOSE_STEP_VAL );
 
             Capsule.CloseStep++;

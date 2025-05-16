@@ -160,6 +160,7 @@ void InitSystem(void)
     InitCommQueue();
     InitCapsule();
 
+
    // InitBldcMotor();
    // InitMovingFaucet();
 
