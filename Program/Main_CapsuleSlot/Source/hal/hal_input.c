@@ -23,10 +23,10 @@ typedef struct _input_config_
 
 InputConfig_T inputList[ IN_MAX_NUM ] = 
 { 
-    { 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetDoorOpen  },
-    { 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetDoorClose },
-    { 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetCapsuleOut  },
-    { 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetCapsuleIn },
+    //{ 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetDoorOpen  },
+    //{ 1,      1,      INPUT_DELAY_100MS,   INPUT_DELAY_100MS,    HAL_GetDoorClose },
+    { 1,      1,      INPUT_DELAY_30MS,   INPUT_DELAY_30MS,    HAL_GetCapsuleOut  },
+    { 1,      1,      INPUT_DELAY_30MS,   INPUT_DELAY_30MS,    HAL_GetCapsuleIn },
 }; 
 
 void InitInputConfDetectTime(void)

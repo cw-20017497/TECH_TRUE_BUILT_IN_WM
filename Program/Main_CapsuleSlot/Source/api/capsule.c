@@ -8,8 +8,8 @@
 
 #define  CAPSULE_DOOR                 SM_ID_0
 #define  CAPSULE_DOOR_SPEED           SM_SPEED_1
-#define  CAPSULE_DOOR_OPEN_STEP_VAL   (20000)
-#define  CAPSULE_DOOR_CLOSE_STEP_VAL  (-20000)
+#define  CAPSULE_DOOR_OPEN_STEP_VAL   (900)
+#define  CAPSULE_DOOR_CLOSE_STEP_VAL  (-950)
 
 
 /* MODE */
@@ -62,6 +62,8 @@ void InitCapsule(void)
     HAL_SetCurrentStep( CAPSULE_DOOR, 0 );
     HAL_SetTargetStep( CAPSULE_DOOR, 0 );
     HAL_SetStepSpeed( CAPSULE_DOOR, CAPSULE_DOOR_SPEED );
+
+    CapsuleInit();
 }
 
 
@@ -93,16 +95,28 @@ static void SetCapsuleStatus(U8 mu8Status)
     Capsule.Status = mu8Status;
 }
 
-void OpenCapsule(void)
+void CapsuleInit(void)
+{
+    SetMode( CAPSULE_MODE_INIT );
+}
+
+void CapsuleOpen(void)
 {
     SetMode( CAPSULE_MODE_OPEN );
 }
 
-void CloseCapsule(void)
+void CapsuleClose(void)
 {
     SetMode( CAPSULE_MODE_CLOSE );
 }
 
+void CapsulePause(void)
+{
+    ClearMode( CAPSULE_MODE_OPEN );
+    ClearMode( CAPSULE_MODE_CLOSE );
+
+    HAL_StopMove( CAPSULE_DOOR );
+}
 
 static void SetMode(U8 mu8Mode )
 {
@@ -219,7 +233,7 @@ static U8 InitDoor(void)
     {
         case 0:
             HAL_InitStepVal( CAPSULE_DOOR );
-            HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_CLOSE_STEP_VAL );
+            HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_OPEN_STEP_VAL );
 
             Capsule.InitStep++;
             break;
@@ -228,11 +242,20 @@ static U8 InitDoor(void)
             if( HAL_IsDoneMoveStep( CAPSULE_DOOR ) == TRUE )
             {
                 HAL_InitStepVal( CAPSULE_DOOR );
+                HAL_SetTargetStep( CAPSULE_DOOR, CAPSULE_DOOR_CLOSE_STEP_VAL );
                 Capsule.InitStep++;
             }
             break;
 
         case 2:
+            if( HAL_IsDoneMoveStep( CAPSULE_DOOR ) == TRUE )
+            {
+                HAL_InitStepVal( CAPSULE_DOOR );
+                Capsule.InitStep++;
+            }
+            break;
+
+        case 3:
             return TRUE;
 
     }
@@ -260,8 +283,9 @@ static U8 OpenDoor(void)
 
         case 1:
             if( HAL_IsDoneMoveStep( CAPSULE_DOOR ) == TRUE )
+                //|| HAL_GetInputValue( IN_CAPSULE_OUT ) == DETECTED )
             {
-                HAL_InitStepVal( CAPSULE_DOOR );
+                //HAL_StopMove( CAPSULE_DOOR );
                 Capsule.OpenStep++;
             }
             break;
@@ -292,7 +316,9 @@ static U8 CloseDoor(void)
 
         case 1:
             if( HAL_IsDoneMoveStep( CAPSULE_DOOR ) == TRUE )
+                    //|| HAL_GetInputValue( IN_CAPSULE_IN ) == DETECTED )
             {
+               // HAL_StopMove( CAPSULE_DOOR );
                 HAL_InitStepVal( CAPSULE_DOOR );
                 Capsule.CloseStep++;
             }

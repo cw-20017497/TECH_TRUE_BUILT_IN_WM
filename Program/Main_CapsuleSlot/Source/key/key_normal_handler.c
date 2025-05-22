@@ -34,6 +34,10 @@ static U8 SelStepDir(void);
 static U8 SelStepStart(void);
 static U8 SelStepStop(void);
 
+static U8 ToggleRunStopCapusle(void);
+static U8 StartPauseCapsule(void);
+static U8 SelPauseCapsule(void);
+static U8 SelInitCapsule(void);
 // 일반 모드 리스트
 KeyEventList_T KeyEventList[] =
 {
@@ -42,7 +46,8 @@ KeyEventList_T KeyEventList[] =
     { K_ONOFF,        SelLedDuty,      NULL,       NULL,      NULL,           NULL,          NULL },
 #else
     //{ K_ONOFF,        SelOff,      NULL,       SelOn,      NULL,           NULL,          NULL },
-    { K_ONOFF,        SelStepDir,      NULL,       NULL,      NULL,           SelStepStop,          SelStepStart },
+    //{ K_ONOFF,        SelStepDir,         NULL,       NULL,           NULL,           SelStepStop,        SelStepStart },
+    { K_ONOFF,        ToggleRunStopCapusle, NULL,       NULL,           NULL,           SelPauseCapsule,    StartPauseCapsule },
 #endif
 };
 
@@ -70,7 +75,7 @@ static U8 SelOn(void)
             || GetCapsuleStatus() == CAPSULE_CLOSING
       )
     {
-        OpenCapsule();
+        CapsuleOpen();
     }
 
     return 0;
@@ -82,7 +87,7 @@ static U8 SelOff(void)
             || GetCapsuleStatus() == CAPSULE_OPENING
       )
     {
-        CloseCapsule();
+        CapsuleClose();
     }
 
     return 0;
@@ -94,13 +99,13 @@ static U8 SelOnOff(void)
             || GetCapsuleStatus() == CAPSULE_OPENING
       )
     {
-        CloseCapsule();
+        CapsuleClose();
     }
     else if( GetCapsuleStatus() == CAPSULE_CLOSE
             || GetCapsuleStatus() == CAPSULE_CLOSING
       )
     {
-        OpenCapsule();
+        CapsuleOpen();
     }
 
     return 0;
@@ -161,11 +166,11 @@ static U8 SelStepStart(void)
 {
     if( count == 0 )
     {
-        OpenCapsule();
+        CapsuleClose();
     }
     else
     {
-        CloseCapsule();
+        CapsuleOpen();
     }
 
     count = 2;
@@ -176,5 +181,47 @@ static U8 SelStepStop(void)
 {
     InitCapsule();
 
+    return 0;
+}
+
+
+static U8 ToggleRunStopCapusle(void)
+{
+    if( GetCapsuleStatus() == CAPSULE_CLOSE 
+            || GetCapsuleStatus() == CAPSULE_CLOSING )
+    {
+        CapsuleOpen();
+    }
+    else if( GetCapsuleStatus() == CAPSULE_OPEN 
+            || GetCapsuleStatus() == CAPSULE_OPENING )
+    {
+        CapsuleClose();
+    }
+
+    return 0;
+}
+
+
+U8 start_pause = 0;
+static U8 StartPauseCapsule(void)
+{
+    start_pause = 1;
+
+    return 0;
+}
+
+static U8 SelPauseCapsule(void)
+{
+    if( start_pause != 0 )
+    {
+        start_pause = 0;
+        CapsulePause();
+    }
+    return 0;
+}
+
+static U8 SelInitCapsule(void)
+{
+    CapsuleInit();
     return 0;
 }

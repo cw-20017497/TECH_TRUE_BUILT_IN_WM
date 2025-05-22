@@ -5,8 +5,8 @@
 /* INPUT ID */
 enum
 {
-    IN_DOOR_OPEN,
-    IN_DOOR_CLOSE,
+//    IN_DOOR_OPEN,
+//    IN_DOOR_CLOSE,
 
     IN_CAPSULE_OUT,
     IN_CAPSULE_IN,
@@ -18,6 +18,9 @@ enum
 #define INPUT_DELAY_100MS  10U       /* 100ms @10ms */
 #define INPUT_DELAY_300MS  30U       /* 300ms @10ms */
 #define INPUT_DELAY_1SEC   100U      /* 1sec @10ms */
+
+#define DETECTED          0
+#define NOT_DETECTED      1
 
 void InitInputConfDetectTime(void);
 

@@ -17,8 +17,10 @@ U8 GetCapsuleStatus(void);
 // FALSE - 추출 중지
 U8 IsOpenCapsule(void);
 
-void OpenCapsule(void);
-void CloseCapsule(void);
+void CapsuleInit(void);
+void CapsuleOpen(void);
+void CapsuleClose(void);
+void CapsulePause(void);
 
 void ControlCapsule(void);
 
